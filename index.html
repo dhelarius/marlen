@@ -11,7 +11,16 @@
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    <div class="container card">
+    <header>
+        <nav class="navbar">
+            <a href="#" class="navbar__link active">Main</a>
+            <a href="#" class="navbar__link">Blog</a>
+            <a href="#" class="navbar__link">About</a>
+            <a href="#" class="navbar__link">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
         <h1>Header h1</h1>
         <h2>Header h2</h2>
         <h3>Header h3</h3>
@@ -22,6 +31,39 @@
         <h1 class="display-1">Display 1</h1>
         <h2 class="display-2">Display 2</h2>
         <h3 class="display-3">Display 3</h3>
+    </div>
+
+    <div class="container">
+        <main class="grid xs-col-1 sm-col-2 md-col-2 lg-col-3">
+            <div class="card">card 1</div>
+            <div class="card">card 2</div>
+            <div class="card">card 3</div>
+            <div class="card">card 4</div>
+            <div class="card">card 5</div>
+            <div class="card">card 6</div>
+        </main>
+    </div>
+
+    <div class="container">
+        <div class="grid lg-col-3">
+            <div class="grid lg-span-2 md-span-3">
+                <div class="card">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, recusandae 
+                    suscipit ad quidem cumque omnis? Accusantium eveniet, voluptas, repellendus commodi 
+                    odio obcaecati reiciendis beatae vero, officia ipsum unde impedit eligendi.</p>
+                </div>
+                <div class="card">
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, recusandae 
+                    suscipit ad quidem cumque omnis? Accusantium eveniet, voluptas, repellendus commodi 
+                    odio obcaecati reiciendis beatae vero, officia ipsum unde impedit eligendi.</p>
+                </div>
+            </div>
+            <div class="grid card lg-span-1 md-span-3">
+                <h3>Logup</h3>
+            </div>
+        </div>
     </div>
 </body>
 </html>
