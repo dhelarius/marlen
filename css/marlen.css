@@ -31,12 +31,21 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 
 /* Color */
 :root {
-   --primary-dark-color: hsl(258, 86%, 34%);
-   --primary-light-color: hsl(276, 91%, 38%);
-   --accent-color: hsl(333, 93%, 56%);
-   --secondary-dark-color:	hsl(36, 99%, 47%);
-   --background: hsl(0, 0%, 95%);
-   --white-color: hsl(255,100%,100%);
+   --color-primary: hsl(195, 83%, 38%);
+   --color-primary-variant: hsl(195, 90%, 28%);
+   --color-secondary: hsl(37, 98%, 53%);
+   --color-secondary-variant:	hsl(32, 99%, 47%);
+   --color-success: hsl(164, 95%, 43%);
+   --color-danger: hsl(42, 100%, 70%);
+   --color-error: hsl(346, 84%, 61%);
+   --color-background: 	hsl(0, 0%, 96%);
+   --color-background-dark: hsl(0, 0%, 85%);
+   --color-surface: hsl(255,100%,100%);
+   --color-on-primary: hsl(255,100%,100%);
+   --color-on-secondary: hsl(255,100%,100%);
+   --color-on-background: hsl(194, 51%, 8%);
+   --color-on-surface: hsl(194, 51%, 8%);
+   --color-on-error: hsl(255,100%,100%);
 }
 
 /* ====================
@@ -44,7 +53,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
 ==================== */
 /* Base */
 body {
-   background-color: var(--background);
+   background-color: var(--color-background);
    font-family: var(--font);
    font-size: var(--normal-font-size);
 }
@@ -255,20 +264,26 @@ h1, h2, h3, h4, h5, h6 {
 /* Card */
 .card {
    padding: 40px;
-   background: var(--white-color);
+   background: var(--color-surface);
    border-radius: 3px;
    box-shadow: 0 0 30px rgba(221,221,221, .3);
 }
 
 /* Navbar */
 .navbar {
-   background: var(--primary-dark-color);
+   background: var(--color-primary);
    display: flex;
    flex-wrap: wrap;
 }
 
+.navbar .container {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0 auto;
+}
+
 .navbar__link {
-   color: var(--white-color);
+   color: var(--color-on-primary);
    text-decoration: none;
    display: flex;
    align-items: center;
@@ -277,3 +292,85 @@ h1, h2, h3, h4, h5, h6 {
    transition: .3s ease all;
    font-size: var(--normal-font-size);
 }
+
+.navbar__link:hover,
+.navbar__link.active {
+   background:var(--color-primary-variant);
+}
+
+/* ====================
+   * FORMS *
+==================== */
+form * {
+   font-family: var(--font);
+}
+
+form .input {
+   padding: 10px 15px;
+   border-radius: 3px;
+   border: 1px solid var(--color-background);
+   transition: .3s ease all;
+   width: 100%;
+   margin-bottom: 20px;
+}
+
+form .input:focus {
+   border: 1px solid var(--color-primary);
+   outline: none;
+}
+
+/* ====================
+   * BUTTONS *
+==================== */
+.button {
+   background: var(--color-background);
+   border: none;
+   cursor: pointer;
+   color: var(--color-on-background);
+   display: inline-block;
+   padding: 10px 15px;
+   border-radius: 3px;
+   text-align: center;
+   line-height: 22px;
+   transition: .3s ease all;
+}
+
+.button:hover {
+   background: var(--color-background-dark);
+}
+
+.button.primary {
+   background: var(--color-primary);
+   color: var(--color-on-primary);
+}
+
+.button.primary:hover {
+   background: var(--color-primary-variant);
+   color: var(--color-on-primary);
+}
+
+.button.secondary {
+   background: var(--color-secondary);
+   color: var(--color-on-secondary)
+}
+
+.button.secondary:hover {
+   background: var(--color-secondary-variant);
+   color: var(--color-on-secondary);
+}
+
+/* ====================
+   * HELPERS *
+==================== */
+.mg-0 { margin: 0; }
+.mg-top-0 { margin-top: 0; }
+.mg-right-0 { margin-right: 0; }
+.mg-bottom-0 { margin-bottom: 0; }
+.mg-left-0 { margin-left: 0; }
+
+.mg-top { margin-top: 20px; }
+.mg-bottom { margin-bottom: 20px; }
+
+.center-text { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }

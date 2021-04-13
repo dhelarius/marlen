@@ -13,10 +13,12 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="#" class="navbar__link active">Main</a>
-            <a href="#" class="navbar__link">Blog</a>
-            <a href="#" class="navbar__link">About</a>
-            <a href="#" class="navbar__link">Contact</a>
+            <div class="container">
+                <a href="#" class="navbar__link active">Main</a>
+                <a href="#" class="navbar__link">Blog</a>
+                <a href="#" class="navbar__link">About</a>
+                <a href="#" class="navbar__link">Contact</a>
+            </div>
         </nav>
     </header>
 
@@ -44,10 +46,19 @@
         </main>
     </div>
 
+    <div class="container card center-text">
+        <h1 class="display-1 mg-0">Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati 
+            quos recusandae quo alias earum nobis ab dolore reprehenderit rem animi, 
+            ullam consequatur et reiciendis ducimus illum dicta! Laboriosam, ad saepe.</p>
+        <button class="button primary">Primary button</button>
+        <button class="button secondary">Secondary button</button>
+    </div>
+
     <div class="container">
         <div class="grid lg-col-3">
-            <div class="grid lg-span-2 md-span-3">
-                <div class="card">
+            <div class="lg-span-2 md-span-3">
+                <div class="card mg-bottom">
                     <h1>Lorem ipsum dolor sit amet.</h1>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, recusandae 
                     suscipit ad quidem cumque omnis? Accusantium eveniet, voluptas, repellendus commodi 
@@ -60,8 +71,14 @@
                     odio obcaecati reiciendis beatae vero, officia ipsum unde impedit eligendi.</p>
                 </div>
             </div>
-            <div class="grid card lg-span-1 md-span-3">
-                <h3>Logup</h3>
+            <div class="signup-form card md-span-3 lg-span-1">
+                <h3 class="signup-form__title">Sing up</h3>
+                <form action="" class="form">
+                    <input class="input" type="text" placeholder="Email" class="form__email">
+                    <input class="input" type="password" name="password" id="" placeholder="Password" class="form__password">
+                    <button class="button primary">Suscribe</button>
+                    <button class="button secondary">Sign up</button>
+                </form>
             </div>
         </div>
     </div>
