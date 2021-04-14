@@ -44,6 +44,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
    --color-on-primary: hsl(255,100%,100%);
    --color-on-secondary: hsl(255,100%,100%);
    --color-on-background: hsl(194, 51%, 8%);
+   --color-on-background-dark: hsl(194, 51%, 8%);
    --color-on-surface: hsl(194, 51%, 8%);
    --color-on-error: hsl(255,100%,100%);
 }
@@ -52,6 +53,10 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
    * GENERALS STYLES *
 ==================== */
 /* Base */
+html {
+   scroll-behavior: smooth;
+}
+
 body {
    background-color: var(--color-background);
    font-family: var(--font);
@@ -71,6 +76,18 @@ img {
 h1, h2, h3, h4, h5, h6 {
    margin-top: 0;
 }
+
+ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   background: var(--color-background);
+ }
+ 
+ a {
+   text-decoration: none;
+   color: var(--color-on-background);
+ }
 
 /* ====================
    * CONTAINERS *
@@ -322,12 +339,13 @@ form .input:focus {
 /* ====================
    * BUTTONS *
 ==================== */
-.button {
+.btn {
    background: var(--color-background);
    border: none;
    cursor: pointer;
    color: var(--color-on-background);
    display: inline-block;
+   margin: 4px 0 4px 0;
    padding: 10px 15px;
    border-radius: 3px;
    text-align: center;
@@ -335,42 +353,66 @@ form .input:focus {
    transition: .3s ease all;
 }
 
-.button:hover {
+.btn:hover {
    background: var(--color-background-dark);
 }
 
-.button.primary {
+.btn.btn-primary {
    background: var(--color-primary);
    color: var(--color-on-primary);
 }
 
-.button.primary:hover {
+.btn.btn-primary:hover {
    background: var(--color-primary-variant);
    color: var(--color-on-primary);
 }
 
-.button.secondary {
+.btn.btn-secondary {
    background: var(--color-secondary);
    color: var(--color-on-secondary)
 }
 
-.button.secondary:hover {
+.btn.btn-secondary:hover {
    background: var(--color-secondary-variant);
    color: var(--color-on-secondary);
 }
 
 /* ====================
-   * HELPERS *
+   * BUTTONS HELPERS *
 ==================== */
-.mg-0 { margin: 0; }
-.mg-top-0 { margin-top: 0; }
-.mg-right-0 { margin-right: 0; }
-.mg-bottom-0 { margin-bottom: 0; }
-.mg-left-0 { margin-left: 0; }
+.btn-sm { padding-top: 6px; padding-bottom: 6px; font-size: 1rem; }
+.btn-lg { padding-top: 14px; padding-bottom: 14px; font-size: 1.4rem; }
 
-.mg-top { margin-top: 20px; }
-.mg-bottom { margin-bottom: 20px; }
 
+/* ====================
+   * MARGIN HELPERS *
+==================== */
+.m-0 { margin: 0; }
+.mt-0 { margin-top: 0; }
+.mr-0 { margin-right: 0; }
+.mb-0 { margin-bottom: 0; }
+.ml-0 { margin-left: 0; }
+.mx-0 { margin-right: 0; margin-left: 0; }
+.my-0 { margin-top: 0; margin-bottom: 0; }
+
+.m { margin: 20px; }
+.mt { margin-top: 20px; }
+.mr { margin-right: 20px; }
+.mb { margin-bottom: 20px; }
+.ml { margin-left: 20px; }
+.mx { margin-right: 20px; margin-left: 20px; }
+.my { margin-top: 20px; margin-bottom: 20px; }
+
+/* ====================
+   * TEXT HELPERS *
+==================== */
 .center-text { text-align: center; }
 .text-right { text-align: right; }
 .text-left { text-align: left; }
+
+/* ====================
+   * IMAGES HELPERS *
+==================== */
+.img-responsive {
+   max-width: 100%;
+}
