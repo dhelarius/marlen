@@ -49,6 +49,24 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:b
    --color-on-error: hsl(255,100%,100%);
 }
 
+/* margin */
+:root {
+   --xs-margin: 4px;
+   --sm-margin: 8px;
+   --margin: 12px;
+   --lg-margin: 16px;
+   --xl-margin: 20px;
+}
+
+/* padding */
+:root {
+   --xs-padding: 4px;
+   --sm-padding: 8px;
+   --padding: 12px;
+   --lg-padding: 16px;
+   --xl-padding: 20px;
+}
+
 /* ====================
    * GENERALS STYLES *
 ==================== */
@@ -345,7 +363,6 @@ form .input:focus {
    cursor: pointer;
    color: var(--color-on-background);
    display: inline-block;
-   margin: 4px 0 4px 0;
    padding: 10px 15px;
    border-radius: 3px;
    text-align: center;
@@ -357,31 +374,33 @@ form .input:focus {
    background: var(--color-background-dark);
 }
 
-.btn.btn-primary {
+/* ====================
+   * BUTTONS MODIFIERS *
+==================== */
+/* color */
+.btn--primary {
    background: var(--color-primary);
    color: var(--color-on-primary);
 }
 
-.btn.btn-primary:hover {
+.btn--primary:hover {
    background: var(--color-primary-variant);
    color: var(--color-on-primary);
 }
 
-.btn.btn-secondary {
+.btn--secondary {
    background: var(--color-secondary);
    color: var(--color-on-secondary)
 }
 
-.btn.btn-secondary:hover {
+.btn--secondary:hover {
    background: var(--color-secondary-variant);
    color: var(--color-on-secondary);
 }
 
-/* ====================
-   * BUTTONS HELPERS *
-==================== */
-.btn-sm { padding-top: 6px; padding-bottom: 6px; font-size: 1rem; }
-.btn-lg { padding-top: 14px; padding-bottom: 14px; font-size: 1.4rem; }
+/* size */
+.btn--sm { padding-top: 6px; padding-bottom: 6px; font-size: 1rem; }
+.btn--lg { padding-top: 14px; padding-bottom: 14px; font-size: 1.4rem; }
 
 
 /* ====================
@@ -395,13 +414,96 @@ form .input:focus {
 .mx-0 { margin-right: 0; margin-left: 0; }
 .my-0 { margin-top: 0; margin-bottom: 0; }
 
-.m { margin: 20px; }
-.mt { margin-top: 20px; }
-.mr { margin-right: 20px; }
-.mb { margin-bottom: 20px; }
-.ml { margin-left: 20px; }
-.mx { margin-right: 20px; margin-left: 20px; }
-.my { margin-top: 20px; margin-bottom: 20px; }
+.m-1 { margin: var(--xs-margin); }
+.mt-1 { margin-top: var(--xs-margin); }
+.mr-1 { margin-right: var(--xs-margin); }
+.mb-1 { margin-bottom: var(--xs-margin); }
+.ml-1 { margin-left: var(--xs-margin); }
+.mx-1 { margin-right: var(--xs-margin); margin-left: var(--xs-margin); }
+.my-1 { margin-top: var(--xs-margin); margin-bottom: var(--xs-margin); }
+
+.m-2 { margin: var(--sm-margin); }
+.mt-2 { margin-top: var(--sm-margin); }
+.mr-2 { margin-right: var(--sm-margin); }
+.mb-2 { margin-bottom: var(--sm-margin); }
+.ml-2 { margin-left: var(--sm-margin); }
+.mx-2 { margin-right: var(--sm-margin); margin-left: var(--sm-margin); }
+.my-2 { margin-top: var(--sm-margin); margin-bottom: var(--sm-margin); }
+
+.m-3 { margin: var(--margin); }
+.mt-3 { margin-top: var(--margin); }
+.mr-3 { margin-right: var(--margin); }
+.mb-3 { margin-bottom: var(--margin); }
+.ml-3 { margin-left: var(--margin); }
+.mx-3 { margin-right: var(--margin); margin-left: var(--margin); }
+.my-3 { margin-top: var(--margin); margin-bottom: var(--margin); }
+
+.m-4 { margin: var(--lg-margin); }
+.mt-4 { margin-top: var(--lg-margin); }
+.mr-4 { margin-right: var(--lg-margin); }
+.mb-4 { margin-bottom: var(--lg-margin); }
+.ml-4 { margin-left: var(--lg-margin); }
+.mx-4 { margin-right: var(--lg-margin); margin-left: var(--lg-margin); }
+.my-4 { margin-top: var(--lg-margin); margin-bottom: var(--lg-margin); }
+
+.m-5 { margin: var(--xl-margin); }
+.mt-5 { margin-top: var(--xl-margin); }
+.mr-5 { margin-right: var(--xl-margin); }
+.mb-5 { margin-bottom: var(--xl-margin); }
+.ml-5 { margin-left: var(--xl-margin); }
+.mx-5 { margin-right: var(--xl-margin); margin-left: var(--xl-margin); }
+.my-5 { margin-top: var(--xl-margin); margin-bottom: var(--xl-margin); }
+
+/* ====================
+   * PADDING HELPERS *
+==================== */
+.p-0 { padding: 0; }
+.pt-0 { padding-top: 0; }
+.pr-0 { padding-right: 0; }
+.pb-0 { padding-bottom: 0; }
+.pl-0 { padding-left: 0; }
+.px-0 { padding-right: 0; padding-left: 0; }
+.py-0 { padding-top: 0; padding-bottom: 0; }
+
+.p-1 { padding: var(--xs-padding); }
+.pt-1 { padding-top: var(--xs-padding); }
+.pr-1 { padding-right: var(--xs-padding); }
+.pb-1 { padding-bottom: var(--xs-padding); }
+.pl-1 { padding-left: var(--xs-padding); }
+.px-1 { padding-right: var(--xs-padding); padding-left: var(--xs-padding); }
+.py-1 { padding-top: var(--xs-padding); padding-bottom: var(--xs-padding); }
+
+.p-2 { padding: var(--sm-padding); }
+.pt-2 { padding-top: var(--sm-padding); }
+.pr-2 { padding-right: var(--sm-padding); }
+.pb-2 { padding-bottom: var(--sm-padding); }
+.pl-2 { padding-left: var(--sm-padding); }
+.px-2 { padding-right: var(--sm-padding); padding-left: var(--sm-padding); }
+.py-2 { padding-top: var(--sm-padding); padding-bottom: var(--sm-padding); }
+
+.p-3 { padding: var(--padding); }
+.pt-3 { padding-top: var(--padding); }
+.pr-3 { padding-right: var(--padding); }
+.pb-3 { padding-bottom: var(--padding); }
+.pl-3 { padding-left: var(--padding); }
+.px-3 { padding-right: var(--padding); padding-left: var(--padding); }
+.py-3 { padding-top: var(--padding); padding-bottom: var(--padding); }
+
+.p-4 { padding: var(--lg-padding); }
+.pt-4 { padding-top: var(--lg-padding); }
+.pr-4 { padding-right: var(--lg-padding); }
+.pb-4 { padding-bottom: var(--lg-padding); }
+.pl-4 { padding-left: var(--lg-padding); }
+.px-4 { padding-right: var(--lg-padding); padding-left: var(--lg-padding); }
+.py-4 { padding-top: var(--lg-padding); padding-bottom: var(--lg-padding); }
+
+.p-5 { padding: var(--xl-padding); }
+.pt-5 { padding-top: var(--xl-padding); }
+.pr-5 { padding-right: var(--xl-padding); }
+.pb-5 { padding-bottom: var(--xl-padding); }
+.pl-5 { padding-left: var(--xl-padding); }
+.px-5 { padding-right: var(--xl-padding); padding-left: var(--xl-padding); }
+.py-5 { padding-top: var(--xl-padding); padding-bottom: var(--xl-padding); }
 
 /* ====================
    * TEXT HELPERS *
