@@ -424,6 +424,10 @@ form .input:focus {
    color: var(--color-on-secondary);
 }
 
+.btn--rounded {
+   border-radius: 25px;
+}
+
 /* size */
 .btn--sm { padding-top: 6px; padding-bottom: 6px; font-size: 1rem; }
 .btn--lg { padding-top: 14px; padding-bottom: 14px; font-size: 1.4rem; }
