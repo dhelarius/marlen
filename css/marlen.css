@@ -390,10 +390,10 @@ form .input:focus {
 
 .btn--outline-primary {
    background: transparent;
-   border: 2px solid var(--color-primary);
+   border: 1px solid var(--color-primary);
    border-color: var(--color-primary);
    color: var(--color-primary);
-   padding: 8px 13px;
+   padding: 9px 14px;
 }
 
 .btn--outline-primary:hover {
@@ -413,10 +413,10 @@ form .input:focus {
 
 .btn--outline-secondary {
    background: transparent;
-   border: 2px solid var(--color-secondary);
+   border: 1px solid var(--color-secondary);
    border-color: var(--color-secondary);
    color: var(--color-secondary);
-   padding: 8px 13px;
+   padding: 9px 14px;
 }
 
 .btn--outline-secondary:hover {
