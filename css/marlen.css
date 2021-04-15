@@ -388,6 +388,19 @@ form .input:focus {
    color: var(--color-on-primary);
 }
 
+.btn--outline-primary {
+   background: transparent;
+   border: 2px solid var(--color-primary);
+   border-color: var(--color-primary);
+   color: var(--color-primary);
+   padding: 8px 13px;
+}
+
+.btn--outline-primary:hover {
+   background: var(--color-primary);
+   color: var(--color-on-primary);
+}
+
 .btn--secondary {
    background: var(--color-secondary);
    color: var(--color-on-secondary)
@@ -395,6 +408,19 @@ form .input:focus {
 
 .btn--secondary:hover {
    background: var(--color-secondary-variant);
+   color: var(--color-on-secondary);
+}
+
+.btn--outline-secondary {
+   background: transparent;
+   border: 2px solid var(--color-secondary);
+   border-color: var(--color-secondary);
+   color: var(--color-secondary);
+   padding: 8px 13px;
+}
+
+.btn--outline-secondary:hover {
+   background: var(--color-secondary);
    color: var(--color-on-secondary);
 }
 
